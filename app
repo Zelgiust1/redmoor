@@ -50,7 +50,18 @@
             margin: 2px 2px;
             cursor: pointer;
         }
-        
+
+        .loupe-text::after {
+    content: attr(alt);
+    display: block;
+    font-size: 24px; /* Ajustez la taille du texte comme vous le souhaitez */
+    font-weight: bold; /* Pour rendre le texte en gras */
+    border: 2px solid black; /* Pour ajouter un encadré noir */
+    padding: 10px; /* Espace à l'intérieur de l'encadré */
+    background-color: red; /* Couleur de fond de l'encadré */
+    color: white; /* Couleur du texte */
+}
+
         .ia-monstres-button {
             background-color: black;
             border: none;
@@ -135,7 +146,7 @@
     </audio>
 
     <div id="randomImageContainer">
-        <img id="randomImage" src="" alt="Touchez la loupe ..." />
+	<img id="randomImage" src="" alt="Touchez la loupe ..." class="loupe-text" />
     <button id="playAudioButton">Lire l'Audio</button>
     </div>
     <button id="generateEventButton" style="display: none;">GENERER !</button>
