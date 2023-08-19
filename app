@@ -339,6 +339,7 @@ const eventAudioSourceElement = document.getElementById("eventAudioSource");
                 displayFouilleResult();
                 randomImageElement.style.opacity = 1; // display new image
             }, 300); // delay is 300 milliseconds
+    document.getElementById("loupeText").style.display = "none";
         });
 
         const imageCounter = {};
