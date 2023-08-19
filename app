@@ -265,19 +265,12 @@ const eventAudioSourceElement = document.getElementById("eventAudioSource");
             };
         }
 
-    generateEventButton.addEventListener("click", () => {
-    const randomEvent = generateRandomEventImage();
+        generateEventButton.addEventListener("click", () => {
+            const randomEvent = generateRandomEventImage();
     const eventImageElement = document.getElementById("eventImage");
-    randomImageElement.src = randomEvent.imageURL;
-    randomImageElement.alt = randomEvent.imageURL.replace(".png", "");
-    
-    // Cacher le texte "Touchez la loupe..."
-    document.getElementById("loupeText").style.display = "none";
-    
-    generateEventButton.style.display = "none";
-});
-
-
+            randomImageElement.src = randomEvent.imageURL;
+            randomImageElement.alt = randomEvent.imageURL.replace(".png", "");
+            generateEventButton.style.display = "none";
             
             if (randomEvent.audioURL) {
                 const eventAudioElement = document.getElementById("eventAudio");
