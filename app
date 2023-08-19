@@ -144,8 +144,8 @@
 
         <button class="fouille-button" id="generateFouilleResultButton"></button>
         <button class="attaque-button" id="attaqueButton" onclick="displayWeightedRandomAttackImage([
-            { file: 'https://storage.googleapis.com/redmoorapp/attaques/attaque1.png', weight: 5 },
-            { file: 'https://storage.googleapis.com/redmoorapp/attaques/attaque2.png', weight: 4 },
+            { file: 'https://storage.googleapis.com/redmoorapp/attaques/attaque1.png', weight: 4 },
+            { file: 'https://storage.googleapis.com/redmoorapp/attaques/attaque2.png', weight: 5 },
             { file: 'https://storage.googleapis.com/redmoorapp/attaques/attaque3.png', weight: 1 }
         ])">Attaque de monstre</button>
         <button class="ia-monstres-button" id="iaMonstresButton" onclick="displayRandomMonsterAIImage()">IA des monstres</button>
@@ -223,6 +223,20 @@ const eventAudioSourceElement = document.getElementById("eventAudioSource");
 "14.png": "14.mp3",
 "15.png": "15.mp3",
 "16.png": "16.mp3",
+"17.png": "17.mp3",
+"18.png": "18.mp3",
+"19.png": "19.mp3",
+"20.png": "20.mp3",
+"21.png": "21.mp3",
+"22.png": "22.mp3",
+"23.png": "23.mp3",
+"24.png": "24.mp3",
+"25.png": "25.mp3",
+"26.png": "26.mp3",
+"27.png": "27.mp3",
+"28.png": "28.mp3",
+"29.png": "29.mp3",
+"30.png": "30.mp3",
             // Ajoutez les autres correspondances ici
         };
 
@@ -255,12 +269,12 @@ const eventAudioSourceElement = document.getElementById("eventAudioSource");
 
         const weightedRandomFouilleResults = [
             { file: "https://storage.googleapis.com/redmoorapp/img/Piege3.png", weight: 15 },
-            { file: "https://storage.googleapis.com/redmoorapp/img/Monstres1.png", weight: 10},
-            { file: "https://storage.googleapis.com/redmoorapp/img/Monstres2.png", weight: 4 },
-            { file: "https://storage.googleapis.com/redmoorapp/img/Monstres3.png", weight: 1 },
+            { file: "https://storage.googleapis.com/redmoorapp/img/Monstres1.png", weight: 11},
+            { file: "https://storage.googleapis.com/redmoorapp/img/Monstres2.png", weight: 5 },
+            { file: "https://storage.googleapis.com/redmoorapp/img/Monstres3.png", weight: 2 },
             { file: "https://storage.googleapis.com/redmoorapp/img/20or2.png", weight: 5 },
             { file: "https://storage.googleapis.com/redmoorapp/img/50or2.png", weight: 3 },
-            { file: "https://storage.googleapis.com/redmoorapp/img/Source2.png", weight: 23 },
+            { file: "https://storage.googleapis.com/redmoorapp/img/Source2.png", weight: 20 },
             { file: "https://storage.googleapis.com/redmoorapp/img/Source_superieure.png", weight: 2 },
             { file: "https://storage.googleapis.com/redmoorapp/img/Tresor_superieur.png", weight: 2},
             { file: "https://storage.googleapis.com/redmoorapp/img/Evenement2.png", weight: 35 }
