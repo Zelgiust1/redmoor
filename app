@@ -51,14 +51,14 @@
             cursor: pointer;
         }
 
-        .loupe-text::after {
-    content: attr(alt);
+     .loupe-text {
     display: block;
     font-size: 24px; /* Ajustez la taille du texte comme vous le souhaitez */
     font-weight: bold; /* Pour rendre le texte en gras */
-    border: 2px solid black; /* Pour ajouter un encadré noir */
+    border: 10px solid black; /* Pour ajouter un encadré noir */
+    border-radius: 50px; /* pour rendre le bouton ovale */
     padding: 10px; /* Espace à l'intérieur de l'encadré */
-    background-color: red; /* Couleur de fond de l'encadré */
+   background-color: rgb(65, 0, 0); /* Couleur de fond de l'encadré */
     color: white; /* Couleur du texte */
 }
 
@@ -146,7 +146,10 @@
     </audio>
 
     <div id="randomImageContainer">
-	<img id="randomImage" src="" alt="Touchez la loupe ..." class="loupe-text" />
+	<img id="randomImage" src="" alt="" />
+<span id="loupeText" class="loupe-text">Touchez la loupe ...</span>
+
+
     <button id="playAudioButton">Lire l'Audio</button>
     </div>
     <button id="generateEventButton" style="display: none;">GENERER !</button>
@@ -262,12 +265,19 @@ const eventAudioSourceElement = document.getElementById("eventAudioSource");
             };
         }
 
-        generateEventButton.addEventListener("click", () => {
-            const randomEvent = generateRandomEventImage();
+    generateEventButton.addEventListener("click", () => {
+    const randomEvent = generateRandomEventImage();
     const eventImageElement = document.getElementById("eventImage");
-            randomImageElement.src = randomEvent.imageURL;
-            randomImageElement.alt = randomEvent.imageURL.replace(".png", "");
-            generateEventButton.style.display = "none";
+    randomImageElement.src = randomEvent.imageURL;
+    randomImageElement.alt = randomEvent.imageURL.replace(".png", "");
+    
+    // Cacher le texte "Touchez la loupe..."
+    document.getElementById("loupeText").style.display = "none";
+    
+    generateEventButton.style.display = "none";
+});
+
+
             
             if (randomEvent.audioURL) {
                 const eventAudioElement = document.getElementById("eventAudio");
@@ -330,7 +340,8 @@ const eventAudioSourceElement = document.getElementById("eventAudioSource");
         const generateButtonContainer = document.getElementById("generateButtonContainer");
 
         generateFouilleResultButton.addEventListener("click", () => {
-            randomImageElement.style.opacity = 0; // hide current image
+            randomImageElement.style.opacity = 0;
+ // hide current image
             setTimeout(() => {
                 displayFouilleResult();
                 randomImageElement.style.opacity = 1; // display new image
@@ -346,6 +357,7 @@ const eventAudioSourceElement = document.getElementById("eventAudioSource");
                     imageCounter[randomFouilleResult]++;
                 } else {
                     imageCounter[randomFouilleResult] = 1;
+
                 }
             }
             console.log(imageCounter);
